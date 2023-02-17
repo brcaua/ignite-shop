@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
-}
 
-module.exports = nextConfig
+  // this property allos us to get images from "unknown" hosts
+  images: {
+    domains: ["files.stripe.com"],
+  },
+};
+
+module.exports = nextConfig;
